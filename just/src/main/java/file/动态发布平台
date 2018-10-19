@@ -1,0 +1,64 @@
+一、环境搭建
+tomcat 8.0x服务器
+maven3.5管理项目
+
+
+1.后端：
+使用springmvc+spring+mybatis框架
+
+后端使用MVC框架模式：
+M:model  		简单的pojo类与数据库进行映射
+V:view          jsp
+C:controller    spring
+持久层                  mybatis框架
+
+
+2.前端：
+
+html+css+js
+
+前端框架：
+
+jquery+bootstrap
+
+
+3.数据库：
+mysql 5.5
+
+
+
+二、具体内容：
+使用springmvc进行前后端交互，mybatis与数据库进行交互
+数据库中的每一张对应一个实体类，其字段名对应实体类的属性。
+比如，数据库中有一张student表，则它有id,username,password等字段，则相对应的必须有一个student.java实体类
+这个类有id,username,password属性，并且生成相应的set,get方法。
+
+具体流程如下：
+
+前端提交过来的所有请求由后端的controller层控制，service处理业务，比如增加数据，删除数据，dao层进行和数据库交互，实现数据库的
+增删改查。
+
+以用户登录请求为例：
+当前端页面 提交过来用户的用户名和密码，由后端controller层进行管理，
+service层验证用户的密码，dao层实现从数据中查询是否存在该信息。
+
+三、注意事项（约束）
+
+java包的命名统一域名倒写按cn.just开头，统一小写，后面跟具体的包，比如controller的包，cn.just.controller
+
+类名首字母统一大写，使用驼峰状的命名规范，每个类最好使用英语单词含义简明知意，例，UserController
+
+前端，html,css,js文件分离，各自建立文件夹存储，不要混在一起
+
+数据库表统一是'j_'开头,比如，j_user
+
+四、人员分工
+
+
+五，数据库设计
+
+用户和动态是一对多的关系，动态和评论是一对多的关心
+
+动态转发：
+
+转发相当于该条动态为当前用户所发，转发的动态前可以注明原动态的发布用户

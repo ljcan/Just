@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.comment">
+	<resultMap type="cn.just.vo.Comment" id="comment">
+		<id column="c_id" property="c_id" />
+		<result column="c_content" property="c_content" />
+		<result column="c_user" property="c_user" />
+		<association property="message" javaType="cn.just.vo.Message">
+			<id column="id" property="id" />
+			<result column="content" property="content" />
+			<result column="user_id" property="user_id" />
+			<result column="publish_time" property="publish_time" />
+			<result column="message_image" property="message_image" />
+			<result column="like_num" property="like_num" />
+		</association>
+	</resultMap>
+	
+	<insert id="publishComment" parameterType="cn.just.vo.Comment">
+		insert into comment values(
+		#{c_id},#{c_comment},#{c_user},#{c_message_id}
+		)
+	</insert>
+	
+	<select id="showAllComment" parameterType="int"	resultType="cn.just.vo.Comment">
+		select * from comment where c_message_id=#{c_message_id}
+	</select>
+	<delete id="deleteComment" parameterType="int">
+		delete from comment where c_message_id=#{message_id}
+	</delete>
+	
+</mapper>

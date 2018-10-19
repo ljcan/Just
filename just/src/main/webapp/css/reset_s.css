@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,a,abbr,cite,dfn,em,img,ins,s,strong,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,section,summary,time,mark,audio,video{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:none;
+}
+html{-webkit-text-size-adjust:none;-ms-text-size-adjust:none;}
+body{font-family: "微软雅黑","Microsoft Yahei", Verdana, Geneva, sans-serif;  
+	 }
+ul,ol,li{list-style-type:none;}
+input,button,textarea,select {outline:none;border-style:none;}
+img{vertical-align:middle;border:none;}
+a{text-decoration:none;}
+.form-actions input{-webkit-appearance: none;}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+-webkit-appearance: none;
+}
+-webkit-appearance:none;
+-webkit-input-placeholder{color:#999;}
+.clearfix:after {content: ".";display: block;height:0;clear: both; visibility: hidden;}  
+.clearfix{zoom:1;}
+a{text-decoration:none;blr:expression(this.onFocus=this.blur());cursor:pointer;}
+a:hover{text-decoration:none;} a:focus{outline:none;}li:focus{outline:none;}
+
+/*滚动条样式*/
+/*::-webkit-scrollbar {
+   width:5px;
+   height:7px;
+}*/
+/* Track */
+/*::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+*//* Handle */
+/*::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: #83a8c3;
+}*/
+
+/*
+background-image: url(../Images/black_bg.png);
+background-repeat: repeat;
+*background-color:#000;
+filter: alpha(opacity=90);
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+
+text-overflow:ellipsis;
+word-break:break-all;
+-webkit-box-shadow:0px 0px 10px #6a6a6a;
+box-shadow:0px 0px 10px #6a6a6a;
+	box-shadow:5px 5px 5px #c1c1c1;下右有投影
+
+::-webkit-input-placeholder {  WebKit browsers 
+color: #f00;
+}
+:-moz-placeholder {  Mozilla Firefox 4 to 18 
+color: #f00;
+}
+::-moz-placeholder {  Mozilla Firefox 19+ 
+color: #f00;
+}
+:-ms-input-placeholder {  Internet Explorer 10+ 
+color: #f00;
+} 
+a { 
+-webkit-transition: all 0.3s ease-in;
+-moz-transition: all 0.3s ease-in;
+-o-transition: all 0.3s ease-in; 
+}
+
+<meta content="telephone=no" name="format-detection" />
+-webkit-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+#logo { position:absolute; top:60px; left:80px;}
+html>body #logo {background-image: url(../Images/logo.png);}定义Firefox、Opera等浏览器中PNG图片的样式(>)
+#logo{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Images/logo.png',sizingMethod='scale'); background-image:none;}定义IE浏览器中的滤镜
+
+*/
+/* background: -webkit-radial-gradient(#f5f5c7, #f4f4c6, #d1d2ab); /* Safari 5.1 - 6.0 */
+	 /* background: -o-radial-gradient(circle,#f5f5c7, #f4f4c6, #d1d2ab); /* Opera 11.6 - 12.0 */
+	 /* background: -moz-radial-gradient(circle,#f5f5c7, #f4f4c6, #d1d2ab); /* Firefox 3.6 - 15 */
+	 /* background: radial-gradient(circle,#f5f5c7, #f4f4c6, #d1d2ab);*//*/ /* 标准的语法 **//

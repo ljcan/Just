@@ -1,0 +1,47 @@
+.menu_main{width:890px;margin:0 auto;margin-top:10px;border:1px solid #e1e1e1;border-radius:4px;background:#fff;box-sizing:border-box;padding:0 10px;}
+.register_top{width:100%;height:50px;line-height:50px;border-bottom:1px solid #e1e1e1;}
+.register_top span{    margin-left: 22px; font-size: 16px; color: #666;}
+.mailbox_box{float: left;font-size: 14px;color:#698ebf;margin-left:16px;display:none;margin-top:32px;}
+.emali {    width: 274px; float: left; text-align: right;font-size: 14px;  margin-top:34px;color: #666;}
+.mailbox_input{     float: left;border: 1px solid #e1e1e1; margin-top: 26px; height: 30px; width: 325px; line-height: 30px; padding-left: 10px;
+ margin-left: 14px; border-radius: 4px;}
+ .mailbox_inputs{     float: left;border: 1px solid #e1e1e1; margin-top: 26px;line-height: 30px; padding-left: 10px;
+ margin-left: 14px; border-radius: 4px;}
+.mailbox{    height: 60px;}
+.mailbox_box i{    margin-top: 4px;float: left; height: 2px; font-style: normal;font-size: 16px; margin-right: 2px;}
+.a_zc{ width: 99px; height: 40px; color: #fff; background: rgb(15, 136, 235);  display: block; float: right; margin-right: 45px; border-radius: 4px; text-align: center;  line-height: 40px;
+  margin-top: 48px;font-size: 15px; margin-bottom: 28px;}
+ .scholor_main{height:980px; overflow-y : hidden;}
+ body{overflow:-Scroll;overflow-y:hidden;}
+
+ .Bomb{width:100%;height:500px;background:#fff;display: block;} 
+.Bomb .bombTitle{margin-top:20px;margin-left:20px;color:#666666;}
+.Bomb .first_class{padding-left:15px;margin-top:20px;}
+.Bomb .first_class li{display:inline-block;padding-left:4px;padding-right:4px;margin-top:10px;padding-top:2px;padding-bottom:2px;}
+.Bomb .first_class li a{color:#698ebf;}
+.curent{background:#0F88EB; border-radius: 3px;}
+
+.curentA{color:#FFFFFF !important;}
+.stripA{width:100%;height:1px;background:#EBEEF5; margin: 20px auto;}
+.second_class{padding-left:10px;}
+.second_class li{display:inline-block;margin-left:5px;padding-left:4px;padding-right:4px;margin-top:10px;padding-top:2px;padding-bottom:2px;}
+.second_class li a{font-size:12px;color:#698ebf;cursor:pointer;}
+.second_class li img{display:none;z-index:9999;}
+.curentB{background:#0F88EB;border-radius: 3px;}
+.Bomb .button_btn{width:100px;text-align:center;height:40px;line-height:40px;background:#0F88EB;color:#fff;font-family: "微软雅黑";font-size:16px;float:right;margin-right:46px;margin-top:204px;cursor:pointer;border-radius:5px;}
+.yinying{width: 100%;height:100%;position:absolute;top:0px;left:0px; background:black;z-index:9999;opacity:0.5;display:none;transition:ease-in-out ;}
+.add_color{color:#698ebf !important;}
+.crumbs a:hover{color:#698ebf;}
+
+.button_btn{    margin-top: 62px !important;margin-bottom: 30px !important;}
+.menu_sc .china{height:60px;line-height:60px;    margin-left: 42px;}
+.china span{    color: #666; font-size: 15px;width:100px;float:left;text-align:right;}
+.china select{  border: 1px solid #e1e1e1;width: 186px; height: 36px; line-height: 36px;color: #666;margin-left: 12px;border-radius: 4px;padding-left: 10px;}
+.keyword{       color: #666;font-size: 20px; font-style: normal; margin-top: 15px; margin-left: 40px;}
+.keyword_ntn{        border: 1px solid #e1e1e1; width: 90%; height: 24px; line-height: 24px; border-radius: 4px; padding-left: 11px;margin-top: 20px;
+   margin-left: 38px;}
+.bcsd_btn{    width: 100px; text-align: center; height: 40px; margin-right:26px;line-height: 40px; color: rgb(255, 255, 255);font-family: "微软雅黑"; font-size: 16px; float: right;
+ margin-top: 40px;cursor: pointer; background: rgb(15, 136, 235); border-radius: 5px; margin-bottom: 23px;}
+ .Bombs{    display: block; position: fixed; top: 0;  z-index: 99999; width: 754px; height: 500px; background: #fff; display: none; border-radius: 6px;left:50%;margin-left:-328px;
+ 	top:14%;}
+ .menu_mains{width: 850px !important;}

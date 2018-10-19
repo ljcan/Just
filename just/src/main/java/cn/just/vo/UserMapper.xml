@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis">
+	<resultMap type="cn.just.vo.User" id="user">
+		<id column="id" property="id" />
+		<result column="username" property="username" />
+		<result column="pwd" property="pwd" />
+		<result column="user_image" property="user_image" />
+		<result column="introduce" property="introduce" />
+		<collection property="message" javaType="cn.just.vo.Message">
+			<id column="id" property="id" />
+			<result column="content" property="content" />
+			<result column="user_id" property="user_id" />
+			<result column="publish_time" property="publish_time" />
+			<result column="message_image" property="message_image" />
+			<result column="like_num" property="like_num" />
+		</collection>
+		<!-- 
+		<collection property="love" javaType="cn.just.vo.Love">
+			<id column="l_id" property="l_id" />
+			<result column="u_id" property="u_id" />
+			<result column="u_name_ed" property="u_name_ed" />
+		</collection>
+		<collection property="fans" javaType="cn.just.vo.Fans">
+			<id column="f_id" property="f_id" />
+			<result column="f_u_id" property="f_u_id" />
+			<result column="f_name" property="f_name" />
+		</collection>
+		 -->
+	</resultMap>
+
+
+	<select id="userSelect" resultType="cn.just.vo.User" parameterType="cn.just.vo.UserEntity">
+		select id,username from user
+	</select>
+	<select id="selectId" resultType="cn.just.vo.User">
+		select * from user where username=#{username}
+	</select>
+	
+	<select id="selectPwd" resultType="cn.just.vo.User">
+		select * from user where username=#{username}
+	</select>
+	<!-- 获取用户头像 -->
+	<select id="getUserImage" resultType="String">
+		select user_image from user where id=#{id}
+	</select>
+	<!-- 获取用户介绍信息 -->
+	<select id="getUserIntroduce" resultType="String">
+		select introduce from user where id=#{id}
+	</select>
+	
+	<insert id="userInsert" parameterType="cn.just.vo.User">
+		insert into user(username,pwd,user_image,introduce) values(#{username},#{pwd},#{user_image},#{introduce})
+	</insert>
+	<delete id="userDelete" parameterType="int">
+		delete from user where id=#{id}
+	</delete>
+	<update id="userUpdate" parameterType="cn.just.vo.User">
+		update user set username=#{username},pwd=#{pwd} where username=#{username}
+	</update>
+	<update id="updateImage" parameterType="cn.just.vo.ImageMessage">
+		update user set user_image=#{user_image} where id=#{id}
+	</update>
+	
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases> 
+        <package name="cn.just.vo"/>
+    </typeAliases> 
+    
+    <mappers>
+        <!-- 所有mapping文件 -->
+        <mapper resource="cn/just/vo/UserMapper.xml"/>
+        <mapper resource="cn/just/vo/CommentMapper.xml"/>
+        <mapper resource="cn/just/vo/MessageMapper.xml"/>
+        <mapper resource="cn/just/vo/LoveMapper.xml"/>
+        <mapper resource="cn/just/vo/FansMapper.xml"/>
+    </mappers>
+</configuration>

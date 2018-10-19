@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.love">
+	<resultMap type="cn.just.vo.Love" id="love">
+		<id column="l_id" property="l_id" />
+		<result column="u_id" property="u_id" />
+		<result column="u_name_ed" property="u_name_ed" />
+		<!-- 
+		<association property="user" javaType="cn.just.vo.User">
+			<id column="id" property="id" />
+			<result column="username" property="username" />
+			<result column="pwd" property="pwd" />
+			<result column="user_image" property="user_image" />
+			<result column="introduce" property="introduce" />
+		</association>
+		 -->
+	</resultMap>
+	<insert id="insert" parameterType="cn.just.vo.LoveEntity">
+		insert into love(u_id,u_name_ed) values(#{u_id},#{u_name_ed})
+	</insert>
+	<select id="getAttention" resultType="cn.just.vo.Love">
+		select * from love where u_id=#{u_id}
+	</select>
+
+	
+</mapper>

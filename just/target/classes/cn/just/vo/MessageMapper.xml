@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.message">
+	<resultMap type="cn.just.vo.Message" id="message">
+		<id column="id" property="id" />
+		<result column="content" property="content" />
+		<result column="user_id" property="user_id" />
+		<result column="publish_time" property="publish_time" />
+		<result column="message_image" property="message_image" />
+		<result column="like_num" property="like_num" />
+		<association property="user" javaType="cn.just.vo.User">
+			<id column="id" property="id"/>
+			<result column="username" property="username" />
+			<result column="pwd" property="pwd" />
+			<result column="user_image" property="user_image" />
+			<result column="introduce" property="introduce" />
+		</association>
+
+		<collection property="comment" javaType="cn.just.vo.Comment">
+			<id column="c_id" property="c_id" />
+			<result column="c_content" property="c_content" />
+			<result column="c_user" property="c_user"/>
+		</collection>
+	</resultMap>
+	<!-- 发布任务 -->
+	<insert id="publishTask" parameterType="cn.just.vo.Message">
+		insert into message values(
+		#{id},#{content},#{user_id},#{publish_time},#{message_image},#{like}
+		)
+	</insert>
+	<select id="showMessage" resultType="cn.just.vo.MessageEntity">
+		select m.id,m.content,m.message_image,u.username,m.like_num from message m join user u on m.user_id=u.id
+	</select>
+	
+	<select id="showPersonalMessage" resultType="cn.just.vo.MessageEntity" parameterType="java.lang.String">
+		select m.id,m.content,m.message_image,u.username,m.like_num from message m 
+		join user u on m.user_id=u.id 
+		where u.username=#{username}
+	</select>
+	
+	<select id="selectMessageById" resultType="cn.just.vo.Message" parameterType="int">
+		select * from message where id=#{id}
+	</select>
+	<delete id="deleteMessage" parameterType="int">
+	delete from message where id=#{message_id}
+	</delete>
+	<update id="updateLike" parameterType="int">
+	update message set like_num=#{like_num} where id=#{id}
+	</update>
+	
+	<select id="selectLike" parameterType="int" resultType="cn.just.vo.Message">
+	select * from message where id=#{id}
+	</select>
+	
+</mapper>

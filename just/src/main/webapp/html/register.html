@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>注册</title>
+	<meta charset="UTF-8">
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+	<link href="../css/reset_s.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/base.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/register.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="../js/comment.js"></script>
+</head>
+<body>
+	<!-- /********************头部start***************************/ -->
+    <div class="scholor_head" scroll="no">
+        <div class="scholor_content clearfix">
+            <div class="content_title">
+               <a href="../message/showMessage.spring">首页</a>
+
+                <a href="special_column.html">专栏</a>
+                <a href="research_group.html">技术平台</a>
+            </div>
+            <div class="input_text clearfix"><span class="cursor_scholor"></span><span class="scholor_search"></span></div>
+            <a href="personal_center.html" class="quiz">联系我们</a>
+            <div class="information">
+              <a href="notice.html" class="inform"><span class="scholor"></span><span class="s_btn">1</span></a>
+              <a href="news.html" class="news"><span class="news_btn"></span><span class="s_btn">2</span></a>
+              <a href="#2" class="set"><span class="set_btn"></span><span class="quit">退出</span></a>
+              <a href="register.html" class="zhuce_lj">注册</a>
+           </div>
+      </div>
+    </div>
+<!-- /********************头部end***************************/ -->
+   <!-- /********************主体start***************************/ -->
+    <div class="scholor_main clearfix">
+    	<!-- /********************整体内容start***************************/ -->
+		<form action="../user/register.spring" method="post">
+    	<div class="menu_main clearfix">
+    	    <div class="register_top">
+    	    	 <span>用户注册</span>
+    	    </div>
+            <div class="users_res">
+            	<div class="mailbox clearfix">
+            		<span class="emali">用户名:</span>
+            		<input type="text" value="" name="username" placeholder="请输入用户名" class="mailbox_input"/>
+            		<span class="mailbox_box"><i>*</i>请输入用户名</span>
+            	</div>
+            	<div class="mailbox clearfix">
+            		<span class="emali">密码:</span>
+            		<input type="password" value="" name="pwd" placeholder="请输入密码" class="mailbox_input"/>
+            		<span class="mailbox_box"><i>*</i>请输入密码</span>
+            	</div>
+            	<div class="mailbox clearfix">
+            		<span class="emali">社团介绍:</span>
+					<textarea  rows="10" cols="40" name="introduce" value="" placeholder="请介绍一下你的社团......（200字以内）" style="padding-left:1rem" class="mailbox_inputs"></textarea>
+            		<span class="mailbox_box"><i>*</i>请介绍一下你的社团</span>
+            	</div>
+            	<input  type="submit"  class="a_zc" value="注册"/>
+            </div>
+		</form>
+    	</div>
+     <!-- /********************整体内容end***************************/ -->
+    </div>
+    <!-- /********************主体end***************************/ -->
+</body>
+</html>

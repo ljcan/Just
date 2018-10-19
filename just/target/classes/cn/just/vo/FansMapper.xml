@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.fans">
+	<resultMap type="cn.just.vo.Fans" id="fans">
+		<id column="f_id" property="f_id" />
+		<result column="f_u_id" property="f_u_id" />
+		<result column="f_name" property="f_name" />
+		<!-- 
+		<association property="user" javaType="cn.just.vo.User">
+			<id column="id" property="id" />
+			<result column="username" property="username" />
+			<result column="pwd" property="pwd" />
+			<result column="user_image" property="user_image" />
+			<result column="introduce" property="introduce" />
+		</association>
+		 -->
+	</resultMap>
+	<insert id="insert" parameterType="cn.just.vo.Fans">
+		insert into fans(f_u_id,f_name) values(#{f_u_id},#{f_name})
+	</insert>
+	<select id="getFans" resultType="cn.just.vo.Fans">
+		select * from fans where f_u_id=#{f_u_id}
+	</select>
+
+	
+</mapper>
